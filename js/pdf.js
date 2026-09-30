@@ -46,6 +46,7 @@
         if (!answer) return;
         line(`${clean(label)}: ${clean(answer)}`);
       });
+      if (title === 'Referências') card.querySelectorAll('.references p').forEach(reference => line(clean(reference.textContent)));
       if (title === 'Mapa Corporal') drawMap(data.bodyMap);
       y += 3;
     });
